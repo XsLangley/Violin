@@ -77,7 +77,7 @@ def main(args):
         # initialize a model
         model = getattr(models, args.model)(info_dict) if args.dataset != 'ogbn-arxiv' else getattr(models_ogb, args.model)(info_dict)
         # initialize a trainer
-        backbone_list = ['GCN', 'GAT', 'SAGE', 'JKNet', 'GCN2', 'APPNP', 'GIN', 'SGC']
+        backbone_list = ['GCN', 'GAT', 'SAGE', 'JKNet', 'GCN2', 'APPNPNet', 'GIN', 'SGC']
         if args.model in backbone_list:
             trainer = getattr(trainers, 'BaseTrainer')(g, model, info_dict)
         else:
@@ -106,7 +106,7 @@ if __name__ == '__main__':
                         help="number of rounds to repeat the experiment")
     parser.add_argument("--model", type=str, default='ViolinGCN',
                         help="model name")
-    parser.add_argument("--dataset", type=str, default='cora',
+    parser.add_argument("--dataset", type=str, default='Cora',
                         help="the dataset for the experiment")
     parser.add_argument("--n_epochs", type=int, default=300,
                         help="the number of training epochs")

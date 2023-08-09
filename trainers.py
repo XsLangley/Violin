@@ -266,7 +266,7 @@ class ViolinTrainer(BaseTrainer):
             # results on the original graph
             ori_logits = self.model(x_data, ori_edge_index)
             ori_conf = torch.softmax(ori_logits, dim=1)
-            # results on the virtual-link graph
+            # results on the semantic-consistent graph
             aug_logits = self.model(x_data, aug_edge_index)
             aug_conf = torch.softmax(aug_logits, dim=1)
 
