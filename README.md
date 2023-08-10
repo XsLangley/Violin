@@ -8,21 +8,20 @@ Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos), both 
 
 (Still under construction...)
 
-## Instruction
-This is a sample code of Violin(GCN) on Cora, Citeseer and Pubmed datasets.
 
-requirements:
+## requirements
 - Numpy >= 1.23.1
 - PyTorch >= 1.9.0
 - PyTorch Geometric == 2.0.4
 - scikit-learn >= 1.1.2
 - ogb == 1.2.1
 
-```
-Note: the code may not be compatible with the latest PyTorch Geometric and ogb libraries.
-Please modify the code accordingly if you encounter any errors (especially the part of loading dataset).
-```
 
+> Note: the code may not be compatible with the latest PyTorch Geometric and ogb libraries.
+Please modify the code accordingly if you encounter any errors (especially the part of loading dataset).
+
+
+## Instruction
 Two steps to quickly reproduce the results:
 1. train the vanilla GCN. Type the following commands:
    - Cora: ```python main.py --model GCN --dataset Cora```
