@@ -1,4 +1,10 @@
-# Violin
+# Violin: Virtual Overbridge Linking
+
+<p align="center"><img alt='The pipeline of Violin.' width="100%" src="assets/fig_violin_pipeline.png" /></p>
+
+This is the code repo for the **IJCAI 2023** paper "Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels".
+
+Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos), both of which are designed to enhance the performance of GNNs in semi-supervised node classification tasks when labeled nodes are limited.
 
 (Still under construction...)
 
@@ -12,8 +18,10 @@ requirements:
 - scikit-learn >= 1.1.2
 - ogb == 1.2.1
 
+```
 Note: the code may not be compatible with the latest PyTorch Geometric and ogb libraries.
-Please modify the code accordingly if you encounter any errors (especially for the part of dataset loading).
+Please modify the code accordingly if you encounter any errors (especially the part of loading dataset).
+```
 
 Two steps to quickly reproduce the results:
 1. train the vanilla GCN. Type the following commands:
