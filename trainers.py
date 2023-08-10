@@ -171,7 +171,7 @@ class ViolinTrainer(BaseTrainer):
         print('The number of edges before adding virtual links: {}'.format(ori_adj.shape[1]))
 
         # number of virtual links to be added for each node
-        n_vo = self.info_dict['n_vo']
+        n_vo = self.info_dict['m']
         virt_edges = []
         tr_mask = self.g.train_mask.bool()
         other_mask = ~tr_mask

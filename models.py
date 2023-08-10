@@ -34,11 +34,12 @@ class GCN(nn.Module):
             self.enc[i].reset_parameters()
             self.bns[i].reset_parameters()
 
+
 class ViolinGCN(GCN):
     def __init__(self, info_dict):
         super().__init__(info_dict)
 
-        
+
 class GAT(nn.Module):
     def __init__(self, info_dict):
         super(GAT, self).__init__()
@@ -76,6 +77,11 @@ class GAT(nn.Module):
             self.bns[i].reset_parameters()
 
 
+class ViolinGAT(GAT):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
+
+
 class SAGE(nn.Module):
     def __init__(self, info_dict):
         super().__init__()
@@ -106,6 +112,11 @@ class SAGE(nn.Module):
         for i in range(self.info_dict['n_layers']):
             self.enc[i].reset_parameters()
             self.bns[i].reset_parameters()
+
+
+class ViolinSAGE(SAGE):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
 
 
 class JKNet(nn.Module):
@@ -145,6 +156,11 @@ class JKNet(nn.Module):
         for i in range(self.info_dict['n_layers']):
             self.enc[i].reset_parameters()
             self.bns[i].reset_parameters()
+
+
+class ViolinJKNet(JKNet):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
 
 
 class SGC(nn.Module):
@@ -198,6 +214,11 @@ class APPNPNet(nn.Module):
             self.bns[i].reset_parameters()
 
 
+class ViolinAPPNPNet(APPNPNet):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
+
+
 class GCN2(nn.Module):
     def __init__(self, info_dict):
         super().__init__()
@@ -238,6 +259,11 @@ class GCN2(nn.Module):
             self.bns[i].reset_parameters()
 
 
+class ViolinGCN2(GCN2):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
+
+
 class GIN(nn.Module):
     def __init__(self, info_dict):
         super().__init__()
@@ -268,3 +294,8 @@ class GIN(nn.Module):
         for i in range(self.info_dict['n_layers']):
             self.enc[i].reset_parameters()
             self.bns[i].reset_parameters()
+
+
+class ViolinGIN(GIN):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)

@@ -129,11 +129,11 @@ if __name__ == '__main__':
     parser.add_argument("--gamma", type=float, default=0.6,
                         help="coefficient for the virtual link loss")
     parser.add_argument("--cls_mode", type=str, default='virt',
-                        help="the type of the classification loss")
+                        help="the type of the classification loss (Eq.10), 'virt' only includes the second term, while 'both' inlcudes both terms")
     parser.add_argument("--delta", type=float, default=0.9,
                         help="the acc requirement (\delta) to pick node candidates for building VOs")
-    parser.add_argument("--n_vo", type=int, default=1,
-                        help="the number of VOs for every node to add")
+    parser.add_argument("--m", type=int, default=1,
+                        help="the number of VOs per node")
     parser.add_argument("--bn", action='store_true', default=False,
                         help="a flag to indicate whether use batch-norm for training")
     args = parser.parse_args()

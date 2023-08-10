@@ -46,18 +46,20 @@ Extensive experiments on six datasets demonstrate that our method is effective a
 Please modify the code accordingly if you encounter any errors (especially the part of loading dataset).
 
 
-## Instruction
-Two steps to quickly reproduce the results:
+## Instructions
+Two steps to quickly reproduce the results on the Cora, Citeseer, Pubmed and Ogbn-arxiv datasets:
 1. train the vanilla GCN. Type the following commands:
    - Cora: ```python main.py --model GCN --dataset Cora```
    - Citeseer: ```python main.py --model GCN --dataset Citeseer```
    - Pubmed: ```python main.py --model GCN --dataset Pubmed``
+   - Ogbn-arxiv: ```python main.py --model GCN --dataset ogbn-arxiv --n_layers 3 --n_hidden 256 --bn --dropout 0.5``
 2. enhance the trained GCN model using Violin. Type the following command:
    - Cora: ```python main.py --model ViolinGCN --dataset Cora --alpha 0.8 --delta 0.9```
    - Citeseer: ```python main.py --model ViolinGCN --dataset Citeseer --alpha 0.2 --delta 0.8```
-   - Pubmed: ```python main.py --model ViolinGCN --dataset Pubmed --alpha 0.4 --delta 0.9 --cls_mode both --n_vl 2```
+   - Pubmed: ```python main.py --model ViolinGCN --dataset Pubmed --alpha 0.4 --delta 0.9 --cls_mode both --m 2```
+   - Ogbn-arxiv: ```python main.py --model ViolinGCN --dataset ogbn-arxiv --n_layers 3 --hid_dim 256 --bn --dropout 0.5 --gamma 0.4 --alpha 0.6 --delta 0.8 --cls_mode both --m 2```
 
-If you would like to speed up the training with a GPU, you can specify the ID of your GPU card by adding `--gpu [gpu_id]` to the command line, e.g.,:
+If you would like to speed up the training with a GPU, you can specify the ID of your GPU card by adding `--gpu [gpu_id]` to the command, e.g.,:
 1. train the vanilla GCN, with GPU#0. Type the following commands:
    - Cora: ```python main.py --model GCN --dataset Cora --gpu 0```
 2. enhance the trained GCN model using Violin, with GPU#0. Type the following command:
@@ -66,4 +68,3 @@ If you would like to speed up the training with a GPU, you can specify the ID of
 You can modify the training settings by using different hyper-parameters.
 Settings corresponding to the reported results are detailed in Table 6 of Appendix D.3.
 
-The complete version of Violin for all experiments will be open-sourced if this paper gets published.
