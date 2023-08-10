@@ -96,7 +96,7 @@ def main(args):
         print('The time cost of the {} round ({} epochs) is: {}.'.format(i, info_dict['n_epochs'], time_cost))
 
     print('\n\n')
-    print('The averaged accuracy of {} rounds experiment on {} is: {}'.format(args.round, args.dataset, np.mean(acc_list)))
+    print('The averaged accuracy of {} rounds of experiments on {} is: {}'.format(args.round, args.dataset, np.mean(acc_list)))
     print('The averaged time cost (seconds/ 100 epochs) of {} rounds is {:.4f}'.format(args.round, np.mean(time_cost_list) / args.n_epochs * 100))
 
 
@@ -118,7 +118,7 @@ if __name__ == '__main__':
                         help="the hidden dimension of hidden layers in the backbone model")
     parser.add_argument("--dropout", type=float, default=0.6,
                         help="dropout rate")
-    parser.add_argument("--gpu", type=int, default=0,
+    parser.add_argument("--gpu", type=int, default=-1,
                         help="specify the gpu index, set -1 to train on cpu")
     parser.add_argument("--lr", type=float, default=0.01,
                         help="the learning rate")

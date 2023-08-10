@@ -1,15 +1,40 @@
 # Violin: Virtual Overbridge Linking
 
+(Still under construction...)
+
 <p align="center"><img alt='The pipeline of Violin.' width="100%" src="assets/fig_violin_pipeline.png" /></p>
 
 This is the code repo for the **IJCAI 2023** paper "Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels".
+You can also find the appendix of Violin in the [./appendix](./appendix) directory.
 
-Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos), both of which are designed to enhance the performance of GNNs in semi-supervised node classification tasks when labeled nodes are limited.
+Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos). 
+Both of them are designed to enhance the performance of GNNs in semi-supervised node classification tasks when labels available for training are limited.
 
-(Still under construction...)
+The basic information of the is as provided as follows:
+
+> Title: Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels
+
+> Authors: Siyue Xie, Da Sun Handason Tam and Wing Cheong Lau
+
+> Affiliation: The Chinese University of Hong Kong
+
+> Abstract:  Graph Neural Networks (GNNs) is a family of promising tools for graph semi-supervised learning. 
+However, in training, most existing GNNs rely heavily on a large amount of labeled data,
+which is rare in real-world scenarios. 
+Unlabeled data with useful information are usually under-exploited, which limits the representation power of GNNs. 
+To handle these problems, we propose Virtual Overbridge Linking (Violin), a generic framework to enhance the learning capacity of common GNNs. 
+By learning to add virtual overbridges between two nodes that are estimated to be
+semantic-consistent, labeled and unlabeled data can be correlated. Supervised information can be well utilized in training while simultaneously inducing the model to learn from unlabeled data. 
+Discriminative relation patterns extracted from unlabeled nodes can also be shared with other nodes even if they are remote from each other. 
+Motivated by recent advances in data augmentations, we additionally integrate Violin with the consistency regularized training. 
+Such a scheme yields node representations with better robustness, which significantly enhances a GNN. 
+Violin can be readily extended to a wide range of GNNs without introducing additional learnable parameters. 
+Extensive experiments on six datasets demonstrate that our method is effective and robust under low-label rate scenarios, where Violin can boost some GNNs’ performance by over 10% on node classifications.
 
 
-## requirements
+
+
+## Requirements
 - Numpy >= 1.23.1
 - PyTorch >= 1.9.0
 - PyTorch Geometric == 2.0.4

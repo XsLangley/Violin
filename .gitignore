@@ -1,2 +1,4 @@
 .vscode
-*/__pychache__/
+*__pycache__
+exp
+dataset

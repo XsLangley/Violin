@@ -34,7 +34,11 @@ class GCN(nn.Module):
             self.enc[i].reset_parameters()
             self.bns[i].reset_parameters()
 
+class ViolinGCN(GCN):
+    def __init__(self, info_dict):
+        super().__init__(info_dict)
 
+        
 class GAT(nn.Module):
     def __init__(self, info_dict):
         super(GAT, self).__init__()
