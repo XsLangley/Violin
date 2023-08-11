@@ -5,7 +5,7 @@
 <p align="center"><img alt='The pipeline of Violin.' width="100%" src="assets/fig_violin_pipeline.png" /></p>
 
 This is the code repo for the **IJCAI 2023** paper "Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels".
-You can also find the appendix of Violin in the [./appendix](./appendix) directory.
+You can also find a preliminary version of the paper and the appendix in the [./appendix](./appendix) directory.
 
 Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos). 
 Both of them are designed to enhance the performance of GNNs in semi-supervised node classification tasks when labels available for training are limited.
@@ -142,7 +142,7 @@ SAGE: GraphSAGE
 | ViolinGCN_32  | 85.08 &pm; 0.65   | 73.96 &pm; 0.38 | 81.05 &pm; 0.51 | -                     | 
 | ViolinGCN_128 | 84.49 &pm; 0.66   | **74.26** &pm; 0.40 | **81.23** &pm; 0.42 | -             | 
 | ViolinGCN_256 | 84.03 &pm; 0.59   | 74.16 &pm; 0.55 | 80.83 &pm; 0.36 | **72.49** &pm; 0.09   | 
-| ------------  | ----------------- | --------------- | --------------- | --------------------- |
+| ---           | ---               | ---             | ---             | ---                   |
 | MLP           | 58.51 &pm; 0.80   | 55.64 &pm; 0.46 | 72.71 &pm; 0.61 | 55.50 &pm; 0.23       |
 | n2v           | 72.35 &pm; 1.41   | 50.82 &pm; 0.96 | 62.03 &pm; 1.05 | 70.07 &pm; 0.13       |
 | DGI           | 82.30 &pm; 0.60   | 71.80 &pm; 0.70 | 76.80 &pm; 0.60 | N/A                   |
