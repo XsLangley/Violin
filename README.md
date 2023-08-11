@@ -1,7 +1,5 @@
 # Violin: Virtual Overbridge Linking
 
-(Still under construction...)
-
 <p align="center"><img alt='The pipeline of Violin.' width="100%" src="assets/fig_violin_pipeline.png" /></p>
 
 This is the code repo for the **IJCAI 2023** paper "Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels".
