@@ -331,12 +331,10 @@ class ViolinTrainer(BaseTrainer):
             tt_epoch_macro_f1 = metrics.f1_score(tt_labels.cpu().numpy(), tt_preds.cpu().numpy(), average="macro")
 
         toc = time.time()
-        if epoch_i % self.info_dict['eta'] == 0:
-            print("Epoch {} | Loss: {:.4f} | validation accuracy: {:.4f}".format(epoch_i, val_epoch_loss.cpu().item(),
-                                                                                 val_epoch_acc))
+        if epoch_i % 10 == 0:
+            print("Epoch {} | validation loss: {:.4f} | validation accuracy: {:.4f}".format(epoch_i, val_epoch_loss.cpu().item(), val_epoch_acc))
             print("Micro-F1: {:.4f} | Macro-F1: {:.4f}".format(val_epoch_micro_f1, val_epoch_macro_f1))
-            print("Epoch {} | Loss: {:.4f} | testing accuracy: {:.4f}".format(epoch_i, tt_epoch_loss.cpu().item(),
-                                                                                 tt_epoch_acc))
+            print("Epoch {} | test loss: {:.4f} | testing accuracy: {:.4f}".format(epoch_i, tt_epoch_loss.cpu().item(), tt_epoch_acc))
             print("Micro-F1: {:.4f} | Macro-F1: {:.4f}".format(tt_epoch_micro_f1, tt_epoch_macro_f1))
             print('Elapse time: {:.4f}s'.format(toc - tic))
         return (val_epoch_loss.cpu().item(), val_epoch_acc, val_epoch_micro_f1, val_epoch_macro_f1), \

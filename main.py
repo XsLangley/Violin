@@ -40,21 +40,23 @@ def ogb_prep(db, db_dir):
     graph.test_mask = test_mask
     graph.y = label.squeeze()
 
-    dataset[0] = graph
-    return dataset
+    return graph, dataset.num_classes
 
 def load_data(db, db_dir='./dataset'):
-    try:
-        if db == 'ogbn-arxiv':
-            data = ogb_prep('ogbn-arxiv', db_dir)
-        else:
-            data = Planetoid(db_dir, db, transform=transforms.NormalizeFeatures())
-    except:
+    
+    if db == 'ogbn-arxiv':
+        g, out_dim = ogb_prep('ogbn-arxiv', db_dir)
+    elif db in ['Cora', 'CiteSeer', 'PubMed']:
+        data = Planetoid(db_dir, db, transform=transforms.NormalizeFeatures())
+        g = data[0]
+        out_dim = data.num_classes
+    else:
         raise ValueError('Unknown dataset: {}'.format(db))
 
-    g = data[0]
-    info_dict = {'in_dim': g.x.shape[1],
-                 'out_dim': data.num_classes, }
+    info_dict = {
+        'in_dim': g.x.shape[1],
+        'out_dim': out_dim
+        }
     return g, info_dict
 
 def set_seed(seed):
