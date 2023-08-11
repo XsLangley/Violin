@@ -32,6 +32,15 @@ Violin can be readily extended to a wide range of GNNs without introducing addit
 Extensive experiments on six datasets demonstrate that our method is effective and robust under low-label rate scenarios, where Violin can boost some GNNs’ performance by over 10% on node classifications.
 
 
+## Cite This Work
+```
+@article{xie2023violin,
+  title={Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels},
+  author={Xie, Siyue and Tam, Da Sun Handason and Lau, Wing Cheong},
+  booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence, IJCAI},
+  year={2023},
+}
+```
 
 
 ## Requirements
