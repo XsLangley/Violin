@@ -129,7 +129,7 @@ if __name__ == '__main__':
     parser.add_argument("--alpha", type=float, default=0.8,
                         help="coefficient for the consistency loss")
     parser.add_argument("--gamma", type=float, default=0.6,
-                        help="coefficient for the virtual link loss")
+                        help="coefficient for the VO loss")
     parser.add_argument("--cls_mode", type=str, default='virt',
                         help="the type of the classification loss (Eq.10), 'virt' only includes the second term, while 'both' inlcudes both terms")
     parser.add_argument("--delta", type=float, default=0.9,
