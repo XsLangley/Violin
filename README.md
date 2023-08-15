@@ -2,8 +2,8 @@
 
 <p align="center"><img alt='The pipeline of Violin.' width="100%" src="assets/fig_violin_pipeline.png" /></p>
 
-This is the code repo for the **IJCAI 2023** paper "Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels".
-You can also find a preliminary version of the paper and the appendix in the [./appendix](./appendix) directory.
+This is the code repo for the **IJCAI 2023** paper ["Violin: Virtual Overbridge Linking for Enhancing Semi-supervised Learning on Graphs with Limited Labels"](https://www.ijcai.org/proceedings/2023/0495.pdf).
+You can also find the [appendix](./appendix/IJCAI2023_Violin_appendix.pdf) of the paper in the [./appendix](./appendix) directory.
 
 Violin is a follow-up work of [CoCoS](https://github.com/xslangley/cocos). 
 Both of them are designed to enhance the performance of GNNs in semi-supervised node classification tasks when labels available for training are limited.
